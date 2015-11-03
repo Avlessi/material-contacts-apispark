@@ -36,7 +36,7 @@ public class WebApiMain {
                 new Redirector(c.getContext().createChildContext(), "/index.html", Redirector.MODE_CLIENT_PERMANENT),
                 Template.MODE_EQUALS);
         // other routes are redirected to static resources
-        c.getDefault Host().attachDefault(
+        c.getDefaultHost().attachDefault(
                 new Directory(c.getContext().createChildContext(), LocalReference.createClapReference("/static")));
 
         // start server
