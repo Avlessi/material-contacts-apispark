@@ -31,7 +31,7 @@ public class WebApiMain {
         c.getDefaultHost().attach("/api", new WebApiApplication());
 
         // redirect / to /index.html
-        c.get DefaultHost().attach(
+        c.getDefaultHost().attach(
                 "/",
                 new Redirector(c.getContext().createChildContext(), "/index.html", Redirector.MODE_CLIENT_PERMANENT),
                 Template.MODE_EQUALS);
