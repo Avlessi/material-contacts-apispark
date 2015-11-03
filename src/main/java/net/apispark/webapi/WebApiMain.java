@@ -31,12 +31,12 @@ public class WebApiMain {
         c.getDefaultHost().attach("/api", new WebApiApplication());
 
         // redirect / to /index.html
-        c.getDefaultHost().at tach(
+        c.getDefaultHost().attach(
                 "/",
                 new Redirector(c.getContext().createChildContext(), "/index.html", Redirector.MODE_CLIENT_PERMANENT),
                 Template.MODE_EQUALS);
         // other routes are redirected to static resources
-        c.getDefaultHost().attachDefault(
+        c.getDefault Host().attachDefault(
                 new Directory(c.getContext().createChildContext(), LocalReference.createClapReference("/static")));
 
         // start server
