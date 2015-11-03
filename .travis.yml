@@ -3,3 +3,8 @@ language: java
 
 #build software 
 script: mvn test
+
+deploy:
+  provider: heroku
+  app: api-spark # optional if it's the same as your repo name
+  api_key: "865ed49d-6ca3-4f39-8983-e4c75fb507ba"
